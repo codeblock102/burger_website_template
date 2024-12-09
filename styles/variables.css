@@ -1,0 +1,15 @@
+:root {
+  --primary-color: #ff6b6b;
+  --secondary-color: #4ecdc4;
+  --text-color: #2d3436;
+  --background-color: #ffffff;
+  --section-padding: 4rem 2rem;
+  --uber-eats-color: #06C167;
+  --accent-color: #ffd93d;
+  --mobile-menu-height: 100vh;
+  --mobile-breakpoint: 768px;
+  --tablet-breakpoint: 1024px;
+  --header-height: 70px;
+  --container-width: 1200px;
+  --grid-gap: 2rem;
+}

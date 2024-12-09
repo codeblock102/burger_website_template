@@ -1,0 +1,177 @@
+.menu-section {
+  padding: var(--section-padding);
+  background-color: #f8f9fa;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50px;
+  background: linear-gradient(to bottom right, transparent 49%, #f8f9fa 51%);
+}
+
+.menu-section h2 {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: var(--text-color);
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu-section h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: var(--primary-color);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  flex: 1;
+}
+
+.menu-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--primary-color);
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.menu-item:hover::before {
+  transform: scaleY(1);
+}
+
+.menu-item h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.menu-item p {
+  color: #666;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.price {
+  display: block;
+  font-weight: bold;
+  color: var(--secondary-color);
+  font-size: 1.3rem;
+  margin-top: 1rem;
+}
+
+.order-section {
+  margin-top: 4rem;
+  text-align: center;
+  padding: 2rem;
+}
+
+.order-button-container {
+  display: inline-block;
+  position: relative;
+}
+
+.order-button-container::after {
+  content: '🔥 Fast Delivery';
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  color: #666;
+  white-space: nowrap;
+}
+
+.order-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: var(--uber-eats-color);
+  color: white;
+  padding: 1.2rem 2.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(6, 193, 103, 0.2);
+  font-size: 1.2rem;
+}
+
+.order-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(6, 193, 103, 0.3);
+  background-color: #05a057;
+}
+
+.order-button i {
+  margin-right: 1rem;
+  font-size: 1.3em;
+}
+
+@media (max-width: 768px) {
+  .menu-section {
+    padding: 2rem 1rem;
+    min-height: 100vh;
+    z-index:2
+  }
+
+  .menu-section h2 {
+    font-size: 2rem;
+    margin: 1rem 0 2rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu-grid {
+    padding: 1rem;
+    gap: 1.5rem;
+    align-content: start;
+  }
+
+  .menu-item {
+    padding: 1.5rem;
+  }
+
+  .order-section {
+    margin-top: 2rem;
+    padding: 1rem;
+  }
+}
