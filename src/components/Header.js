@@ -1,8 +1,9 @@
+import { createLogo } from './Logo.js';
 export function createHeader() {
   return `
     <header class="header">
       <nav class="nav">
-        <div class="logo">Burger Bliss</div>
+      ${createLogo()}
         <button class="mobile-menu-btn" aria-label="Open menu">
           <i class="fas fa-bars"></i>
         </button>
