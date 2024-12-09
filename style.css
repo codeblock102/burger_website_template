@@ -1,9 +1,14 @@
+/* Reset and base styles first */
 @import './styles/variables.css';
 @import './styles/base.css';
+
+/* Component styles */
 @import './styles/header.css';
 @import './styles/menu.css';
 @import './styles/about.css';
 @import './styles/contact.css';
 @import './styles/footer.css';
+
+/* Animations and responsive styles last */
 @import './styles/animations.css';
 @import './styles/mobile.css';
